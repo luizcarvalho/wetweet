@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/statuses/update.json
+    body:
+      encoding: UTF-8
+      string: status=Teste+de+autoriza%C3%A7%C3%A3o
+    headers:
+      User-Agent:
+      - TwitterRubyGem/7.0.0
+      Authorization:
+      - OAuth oauth_consumer_key="9RGaUGXRljxy4vIFf4NysUrta", oauth_nonce="ecda27a4027f3b963faedb310ad833cb",
+        oauth_signature="gLDT3niZBocwgtrMYwdNp4EC6Kg%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1644256883", oauth_token="77046618-wZQoxHvAkv3F0CLhUP9Y78UpooTdySfbmGX56eSiW",
+        oauth_version="1.0"
+      Connection:
+      - close
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - api.twitter.com
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Mon, 07 Feb 2022 18:01:23 GMT
+      Server:
+      - tsa_d
+      Set-Cookie:
+      - guest_id=v1%3A164425688384952881; Max-Age=63072000; Expires=Wed, 07 Feb 2024
+        18:01:23 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None
+      - guest_id_ads=v1%3A164425688384952881; Max-Age=63072000; Expires=Wed, 07 Feb
+        2024 18:01:23 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None
+      - guest_id_marketing=v1%3A164425688384952881; Max-Age=63072000; Expires=Wed,
+        07 Feb 2024 18:01:23 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None
+      - personalization_id="v1_lZJf6aFmh7FKjcb8lRVBSA=="; Max-Age=63072000; Expires=Wed,
+        07 Feb 2024 18:01:23 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache, no-store, max-age=0
+      Content-Length:
+      - '64'
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Response-Time:
+      - '145'
+      X-Connection-Hash:
+      - d9eb862ec76d8ed95f780210407965188d71fa6be89cf27de0fec0229771eac5
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"code":32,"message":"Could not authenticate you."}]}'
+  recorded_at: Mon, 07 Feb 2022 18:01:24 GMT
+recorded_with: VCR 6.0.0

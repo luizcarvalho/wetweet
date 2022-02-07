@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/statuses/update.json
+    body:
+      encoding: UTF-8
+      string: status=Teste+de+autoriza%C3%A7%C3%A3o
+    headers:
+      User-Agent:
+      - TwitterRubyGem/7.0.0
+      Authorization:
+      - OAuth oauth_consumer_key="", oauth_nonce="5b6b3c543dcf2350c2145cbb118eea05",
+        oauth_signature="B4ynSyM8mSGN7i5yEO9w2TsLTjc%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1644257872", oauth_token="77046618-wZQoxHvAkv3F0CLhUP9Y78UpooTdySfbmGX56eSiW",
+        oauth_version="1.0"
+      Connection:
+      - close
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Host:
+      - api.twitter.com
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Mon, 07 Feb 2022 18:17:53 GMT
+      Server:
+      - tsa_d
+      Set-Cookie:
+      - guest_id=v1%3A164425787331416080; Max-Age=63072000; Expires=Wed, 07 Feb 2024
+        18:17:53 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None
+      - guest_id_ads=v1%3A164425787331416080; Max-Age=63072000; Expires=Wed, 07 Feb
+        2024 18:17:53 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None
+      - guest_id_marketing=v1%3A164425787331416080; Max-Age=63072000; Expires=Wed,
+        07 Feb 2024 18:17:53 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None
+      - personalization_id="v1_vKCAAj6cZnOTakectdYYxw=="; Max-Age=63072000; Expires=Wed,
+        07 Feb 2024 18:17:53 GMT; Path=/; Domain=.twitter.com; Secure; SameSite=None
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache, no-store, max-age=0
+      Content-Length:
+      - '62'
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Response-Time:
+      - '140'
+      X-Connection-Hash:
+      - 124022b20cf414a8be4fb1914f73c692a3881cc96f102e7fdcd85667f99770e2
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"errors":[{"code":215,"message":"Bad Authentication data."}]}'
+  recorded_at: Mon, 07 Feb 2022 18:17:53 GMT
+recorded_with: VCR 6.0.0

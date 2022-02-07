@@ -7,3 +7,6 @@ AllCops:
     - '.git/**/*'
     - 'bin/*'
     - 'config/*'
+
+Metrics/MethodLength:
+  Max: 15
