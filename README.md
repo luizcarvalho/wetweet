@@ -5,17 +5,15 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/ba534f892802ece033cd/maintainability)](https://codeclimate.com/github/luizcarvalho/wetweet/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/ba534f892802ece033cd/test_coverage)](https://codeclimate.com/github/luizcarvalho/wetweet/test_coverage)
 
-
-
 WeTweet é um projeto simples que permite por uma simples requisição HTTP enviar um tweet com o clima atual de uma cidade e a média da temperatura para os próximos 5 dias.
 
 ## Getting started
 
-First of all, clone this repository and run bundle install inside of project directory.
+First of all, clone this repository and run bundle install inside of the project directory.
 
     bundle install
 
-Now, you need config credentials of Twitter, for this you need create a [developer account](https://developer.twitter.com/) on Twitter.
+Now, you need to configure the credentials of Twitter, for this, you need to create a [developer account](https://developer.twitter.com/) on Twitter.
 
 With the Twitter keys, run:
 
@@ -37,15 +35,14 @@ Start the Rails server with the command:
 
    bundle exec rails s
 
-If all occurs good, you can access project on url <http://localhost:3000/>
+If all occurs good, you can access the project on URL <http://localhost:3000/>
 
 ## Using WeTweet
 
-To make a tweet using WeTweet, you need to make a request to URL `/twitter/send_weather` with text params. Like this:
+To make a tweet using WeTweet, you need to request URL `/Twitter/send_weather` with text params. Like this:
 
     curl "http://localhost:3000/twitter/send_weather?text=Olaaaaa"
 
-And receive the response  message `'Tweet was successfully sent!'` and text will be displayed in Twitter account.
-
+And receive the response message `'Tweet was successfully sent!'` and text will be displayed in the Twitter account.
 
 Thanks for using WeTweet!
