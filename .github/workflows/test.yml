@@ -3,13 +3,12 @@ name: test
 on: [push, pull_request]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Install Ruby (3)
     - uses: actions/checkout@v2
-    - uses: ruby/setup-ruby@v1
+    - name: Install Ruby (3)
+      uses: ruby/setup-ruby@v1
       with:
         ruby-version: 3.0
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
