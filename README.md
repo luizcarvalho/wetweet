@@ -1,24 +1,51 @@
-# README
+# WeTweet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<img src='docs/arts/logo.svg' height='120' alt='WeTweet Logo' />
 
-Things you may want to cover:
+[![Maintainability](https://api.codeclimate.com/v1/badges/ba534f892802ece033cd/maintainability)](https://codeclimate.com/github/luizcarvalho/wetweet/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/ba534f892802ece033cd/test_coverage)](https://codeclimate.com/github/luizcarvalho/wetweet/test_coverage)
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+WeTweet é um projeto simples que permite por uma simples requisição HTTP enviar um tweet com o clima atual de uma cidade e a média da temperatura para os próximos 5 dias.
 
-* Database creation
+## Getting started
 
-* Database initialization
+First of all, clone this repository and run bundle install inside of project directory.
 
-* How to run the test suite
+    bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+Now, you need config credentials of Twitter, for this you need create a [developer account](https://developer.twitter.com/) on Twitter.
 
-* Deployment instructions
+With the Twitter keys, run:
 
-* ...
+    bundle exec rails credentials:edit --environment development
+
+This command will be open your main text editor, the encrypted credentials file, replace text for:
+
+    twitter:
+      consumer_key: xxxx
+      consumer_secret: yyy
+      access_token: www
+      access_secret: kkk
+
+And close editor.
+
+## Starting project
+
+Start the Rails server with the command:
+
+   bundle exec rails s
+
+If all occurs good, you can access project on url <http://localhost:3000/>
+
+## Using WeTweet
+
+To make a tweet using WeTweet, you need to make a request to URL `/twitter/send_weather` with text params. Like this:
+
+    curl "http://localhost:3000/twitter/send_weather?text=Olaaaaa"
+
+And receive the response  message `'Tweet was successfully sent!'` and text will be displayed in Twitter account.
+
+
+Thanks for using WeTweet!
