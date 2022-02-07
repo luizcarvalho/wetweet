@@ -4,7 +4,10 @@
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 require 'simplecov'
-SimpleCov.start
+require "simplecov_json_formatter"
+
+SimpleCov.start 'rails'
+SimpleCov.formatter = SimpleCov::Formatter::JSONFormatter
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
