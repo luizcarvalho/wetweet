@@ -7,7 +7,9 @@ RSpec.describe 'Twitters', type: :request do
     it 'returns http success', :vcr do
       get '/twitter/send_weather?text=hello'
       expect(response).to have_http_status(:success)
-      expect(response.message).to eq('Tweet was successfully sent!')
+      parsed_response = JSON.parse(response.body)
+
+      expect(parsed_response['message']).to eq('Tweet was successfully sent!')
     end
   end
 end
