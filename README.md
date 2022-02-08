@@ -33,7 +33,7 @@ And close editor.
 
 Start the Rails server with the command:
 
-   bundle exec rails s
+    bundle exec rails s
 
 If all occurs good, you can access the project on URL <http://localhost:3000/>
 
@@ -41,7 +41,8 @@ If all occurs good, you can access the project on URL <http://localhost:3000/>
 
 To make a tweet using WeTweet, you need to request URL `/Twitter/send_weather` with text params. Like this:
 
-    curl "http://localhost:3000/twitter/send_weather?text=Olaaaaa"
+    curl -X POST -H "Content-Type: application/json" -d '{"text": "Olá mundo!"}' "http://localhost:3000/twitter/send_weather"
+
 
 And receive the response message `'Tweet was successfully sent!'` and text will be displayed in the Twitter account.
 
