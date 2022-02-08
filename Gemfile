@@ -20,7 +20,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'pry'
   gem 'rspec-rails', '~> 5.0.0'
-  gem 'simplecov', '0.17.1'
+  gem 'simplecov'
   gem 'vcr'
   gem 'webmock'
 end
