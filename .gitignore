@@ -24,7 +24,9 @@
 /config/master.key
 
 /config/credentials/development.key
+/config/credentials/development.yml.enc
 
 /config/credentials/test.key
-/config/credentials/*
+/config/credentials/test.yml.enc
+
 /vendor/gems/*
