@@ -6,8 +6,18 @@
 require 'simplecov'
 require 'simplecov_json_formatter'
 
-SimpleCov.start 'rails'
-SimpleCov.formatter = SimpleCov::Formatter::JSONFormatter
+SimpleCov.start 'rails' do
+  add_filter 'vendor/gems'
+
+  if ENV['CI']
+    formatter SimpleCov::Formatter::SimpleFormatter
+  else
+    formatter SimpleCov::Formatter::MultiFormatter.new([
+                                                         SimpleCov::Formatter::SimpleFormatter,
+                                                         SimpleCov::Formatter::HTMLFormatter
+                                                       ])
+  end
+end
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

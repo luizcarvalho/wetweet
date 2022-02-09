@@ -11,21 +11,29 @@ WeTweet é um projeto simples que permite por uma simples requisição HTTP envi
 
 First of all, clone this repository and run bundle install inside of the project directory.
 
+```sh
     bundle install
+```
 
 Now, you need to configure the credentials of Twitter, for this, you need to create a [developer account](https://developer.twitter.com/) on Twitter.
 
 With the Twitter keys, run:
 
+```sh
     bundle exec rails credentials:edit --environment development
+```
 
 This command will be open your main text editor, the encrypted credentials file, replace text for:
 
-    twitter:
-      consumer_key: xxxx
-      consumer_secret: yyy
-      access_token: www
-      access_secret: kkk
+```yaml
+twitter:
+  consumer_key: xxxx
+  consumer_secret: xxxx
+  access_token: xxxx
+  access_secret: xxx
+open_weather_map:
+  appid: xxxx
+```
 
 And close editor.
 
@@ -33,17 +41,20 @@ And close editor.
 
 Start the Rails server with the command:
 
-    bundle exec rails s
+```sh
+bundle exec rails s
+```
 
 If all occurs good, you can access the project on URL <http://localhost:3000/>
 
 ## Using WeTweet
 
-To make a tweet using WeTweet, you need to request URL `/Twitter/send_weather` with text params. Like this:
+To make a tweet using WeTweet, you need to request URL `/twitter/send_weather` with coordinates params. Like this:
 
-    curl -X POST -H "Content-Type: application/json" -d '{"text": "Olá mundo!"}' "http://localhost:3000/twitter/send_weather"
+```sh
+curl -X POST -H "Content-Type: application/json" -d '{"lat": "-23.561355", "lon": "-46.6578882"}' "http://localhost:3000/twitter/send_weather"
+```
 
-
-And receive the response message `'Tweet was successfully sent!'` and text will be displayed in the Twitter account.
+And receive the response message `'Tweet was successfully sent!'` and the weather will be displayed in the Twitter account.
 
 Thanks for using WeTweet!

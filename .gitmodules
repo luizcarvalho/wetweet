@@ -1,0 +1,3 @@
+[submodule "vendor/gems/open_weather_map"]
+	path = vendor/gems/open_weather_map
+	url = https://github.com/luizcarvalho/open_weather_map.git

@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/luizcarvalho/open_weather_map.git
+  revision: b7ae54fd9ba8e2f5cfa656e553cdcaf4b132557e
+  specs:
+    open_weather_map (0.1.0)
+      typhoeus (~> 1.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -88,6 +95,8 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     equalizer (0.0.11)
     erubi (1.10.0)
+    ethon (0.15.0)
+      ffi (>= 1.15.0)
     ffi (1.15.5)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
@@ -244,6 +253,8 @@ GEM
       multipart-post (~> 2.0)
       naught (~> 1.0)
       simple_oauth (~> 0.3.0)
+    typhoeus (1.4.0)
+      ethon (>= 0.9.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
@@ -266,13 +277,14 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   debug
+  open_weather_map!
   pry
   puma (~> 5.0)
   rails (~> 7.0.1)
   rspec-rails (~> 5.0.0)
   rubocop-rails
   simplecov
-  twitter
+  twitter (~> 7.0)
   vcr
   webmock
 

@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=6f050326525e40f659575e0adfc5230f&lang=pt_br&lat=-23.561355&lon=-46.6578882&units=metric
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Tue, 08 Feb 2022 21:23:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '472'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?lang=pt_br&lat=-23.56&lon=-46.66&units=metric"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJjb29yZCI6eyJsb24iOi00Ni42NTc5LCJsYXQiOi0yMy41NjE0fSwid2VhdGhlciI6W3siaWQiOjgwMywibWFpbiI6IkNsb3VkcyIsImRlc2NyaXB0aW9uIjoibnVibGFkbyIsImljb24iOiIwNGQifV0sImJhc2UiOiJzdGF0aW9ucyIsIm1haW4iOnsidGVtcCI6MjAuNDksImZlZWxzX2xpa2UiOjIwLjc2LCJ0ZW1wX21pbiI6MTkuNzcsInRlbXBfbWF4IjoyMS40OSwicHJlc3N1cmUiOjEwMTYsImh1bWlkaXR5Ijo4M30sInZpc2liaWxpdHkiOjgwMDAsIndpbmQiOnsic3BlZWQiOjYuMTcsImRlZyI6MTQwfSwiY2xvdWRzIjp7ImFsbCI6NzV9LCJkdCI6MTY0NDM1NTM5NSwic3lzIjp7InR5cGUiOjEsImlkIjo4Mzk0LCJjb3VudHJ5IjoiQlIiLCJzdW5yaXNlIjoxNjQ0MzEwMjE4LCJzdW5zZXQiOjE2NDQzNTcwODV9LCJ0aW1lem9uZSI6LTEwODAwLCJpZCI6NzUyMTkxMiwibmFtZSI6IkNvbnNvbGHDp8OjbyIsImNvZCI6MjAwfQ==
+  recorded_at: Tue, 08 Feb 2022 21:23:15 GMT
+recorded_with: VCR 6.0.0

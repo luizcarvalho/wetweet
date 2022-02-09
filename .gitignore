@@ -27,3 +27,4 @@
 
 /config/credentials/test.key
 /config/credentials/*
+/vendor/gems/*
