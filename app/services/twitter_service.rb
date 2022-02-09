@@ -14,7 +14,7 @@ class TwitterService
   # twitter = TwitterService.new
   # twitter.send_tweet('Helloo World =)')
   #
-  # @params [String] text Text that will be sent to Twitter
+  # @param [String] text Text that will be sent to Twitter
   #
   # @return [Hash<{code: Integer, message: String}>]
   def send_tweet(text)
@@ -31,7 +31,7 @@ class TwitterService
 
   # build a hash with json response informations
   #
-  # @params [Exception] error a instace of an exception raised
+  # @param [Exception] error a instace of an exception raised
   #
   # @return [Hash<{code: Integer, message: String}>]
   def handle_errors(error)
@@ -53,7 +53,7 @@ class TwitterService
   # Used to represent a Error tracking for example
   # build a hash with json response informations
   #
-  # @params [Exception] error a instace of an exception suppressed
+  # @param [Exception] error a instace of an exception suppressed
   #
   # @return nil
   def report_error(error)
@@ -63,9 +63,7 @@ class TwitterService
 
   # build twitter client using credentials information
   #
-  # @example
-  #
-  # credentials using this format
+  # @example credentials format
   #
   # twitter:
   #   consumer_key: xxx
@@ -87,9 +85,7 @@ class TwitterService
 
   # return inverted code-Exception class relation
   #
-  # @example
-  #
-  # Return inverse of this Hash
+  # @example Return inverse Hash
   #
   # {
   #   400=>Twitter::Error::BadRequest,
