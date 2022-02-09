@@ -4,6 +4,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/ba534f892802ece033cd/maintainability)](https://codeclimate.com/github/luizcarvalho/wetweet/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/ba534f892802ece033cd/test_coverage)](https://codeclimate.com/github/luizcarvalho/wetweet/test_coverage)
+![Test workflow](https://github.com/luizcarvalho/wetweet/actions/workflows/test.yml/badge.svg?branch=main)
 
 WeTweet é um projeto simples que permite por uma simples requisição HTTP enviar um tweet com o clima atual de uma cidade e a média da temperatura para os próximos 5 dias.
 
