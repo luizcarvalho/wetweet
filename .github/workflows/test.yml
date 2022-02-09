@@ -21,11 +21,8 @@ jobs:
 
     - name: Export credential
       run: |
-        ls -la
-        ls -la config/credentials/
         echo -n ${{secrets.TEST_KEY}} > config/credentials/test.key
         echo -n ${{secrets.TEST_CREDENTIALS}} > config/credentials/test.yml.enc
-        cat config/credentials/test.yml.enc
 
     - name: Setup Code Climate test-reporter
       run: |
@@ -33,10 +30,12 @@ jobs:
         chmod +x ./cc-test-reporter
         ./cc-test-reporter before-build
 
-    - name: Build and test with RSpec
+    - name: Install Gems
       run: |
         gem install bundler
         bundle install --jobs 4 --retry 3
+    - name: Run tests
+      run: |
         bundle exec rspec
     - name: Publish code coverage
       run: |
