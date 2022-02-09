@@ -37,8 +37,6 @@ jobs:
     - name: Run tests
       run: |
         bundle exec rspec
-        ls -la coverage
-        cat coverage/coverage.json
     - name: Publish code coverage
       run: |
         export GIT_BRANCH="${GITHUB_REF/refs\/heads\//}"
