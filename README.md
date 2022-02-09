@@ -47,6 +47,15 @@ bundle exec rails s
 
 If all occurs good, you can access the project on URL <http://localhost:3000/>
 
+## With Docker
+
+To use this project with Docker, just run the following commands
+
+```sh
+docker-compose build
+docker-compose up
+```
+
 ## Using WeTweet
 
 To make a tweet using WeTweet, you need to request URL `/twitter/send_weather` with coordinates params. Like this:
