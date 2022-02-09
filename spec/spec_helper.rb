@@ -10,7 +10,8 @@ SimpleCov.start 'rails' do
   add_filter 'vendor/gems'
 
   if ENV['CI']
-    formatter SimpleCov::Formatter::SimpleFormatter
+    puts  ENV
+    formatter SimpleCov::Formatter::JSONFormatter
   else
     formatter SimpleCov::Formatter::MultiFormatter.new([
                                                          SimpleCov::Formatter::SimpleFormatter,
