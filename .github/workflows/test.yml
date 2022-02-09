@@ -1,6 +1,12 @@
 name: test
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - test
+  pull_request:
+      branches:
+      - test
 
 jobs:
   test:
@@ -19,6 +25,7 @@ jobs:
         ls -la config/credentials/
         echo -n ${{secrets.TEST_KEY}} > config/credentials/test.key
         echo -n ${{secrets.TEST_CREDENTIALS}} > config/credentials/test.yml.enc
+        cat config/credentials/test.yml.enc
 
     - name: Setup Code Climate test-reporter
       run: |
